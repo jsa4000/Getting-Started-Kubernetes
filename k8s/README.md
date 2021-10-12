@@ -23,6 +23,19 @@ Docker Subscription Service Agreement includes a change to the terms for Docker 
 - The Docker Pro, Docker Team, and Docker Business subscriptions now include commercial use of Docker Desktop.
 - Check out our FAQ for more information. Or read our latest blog.
 
+### [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop)
+
+**Rancher Desktop** is an open-source desktop application for Mac and Windows. It provides Kubernetes and container management. You can choose the version of Kubernetes you want to run. You can build, push, pull, and run container images. The container images you build can be run by Kubernetes immediately without the need for a registry.
+
+**Rancher Desktop** provides the following features in the form of a desktop application:
+
+- The version of Kubernetes you choose
+- Ability to test upgrading Kubernetes to a new version and see how your workloads respond
+- Run containers, and build, push, and pull images (powered by `nerdctl`)
+- Expose an application in Kubernetes for **local** access
+
+All of this is wrapped in an open-source application.
+
 ### [Kind](https://github.com/kubernetes-sigs/kind/)
 
 Primarily designed to test Kubernetes, **Kind** (Kubernetes in Docker) helps you run Kubernetes clusters locally and in CI pipelines using Docker containers as “nodes”.
@@ -357,6 +370,14 @@ for i in {1..15}; do curl -s http://localhost:8080/ | grep '<td>helloworld-deplo
 ```
 
 ## Tools
+
+### [Lens](https://github.com/lensapp/lens)
+
+**Lens** - The Kubernetes IDE ("Lens IDE") is a distribution of the OpenLens repository with Team Lens specific customizations released under a traditional EULA.
+
+Lens IDE provides the full situational awareness for everything that runs in Kubernetes. It's lowering the barrier of entry for people just getting started and radically improving productivity for people with more experience.
+
+Lens IDE a standalone application for MacOS, Windows and Linux operating systems. You can download it free of charge for Windows, MacOS, and Linux from Lens IDE website.
 
 ### [K9s](https://github.com/derailed/k9s)
 
