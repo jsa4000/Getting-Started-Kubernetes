@@ -25,18 +25,19 @@ left to right direction
 
 ' Kubernetes Components
 Cluster_Boundary(cluster, "Kubernetes Cluster") {
-    Namespace_Boundary(ns, "Back End") {
-        KubernetesIng(ingress, "your.domain.com", "")
-        KubernetesSvc(svc, "service", "")
-        KubernetesPod(pod1, "pod1", "")
-        KubernetesPod(pod2, "pod2", "")
-        KubernetesPod(pod3, "pod3", "")
+    Namespace_Boundary(ns, "micro") {
+        KubernetesIng(ingress, "domain.com", "")
+        KubernetesSvc(svc, "Service", "")
+        KubernetesPod(pod1, "Pod1", "")
+        KubernetesPod(pod2, "Pod2", "")
+        KubernetesPod(pod3, "Pod3", "")
 
         KubernetesRs(rs,"","")
-        KubernetesDeploy(deploy,"deployment","")
+        KubernetesDeploy(deploy,"Deployment","")
         KubernetesHpa(hpa, "HPA", "")
     }
 }
+
 
 Rel(userAlias,ingress," ")
 Rel(ingress,svc," ")

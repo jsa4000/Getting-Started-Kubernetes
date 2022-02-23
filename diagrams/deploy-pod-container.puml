@@ -14,7 +14,7 @@
 ' Remove this line for transparent background
 skinparam backgroundColor WHITE
 
-title <color:blue><$k8s></color> **Deployment ➜ Pod ➜ Container** <color:blue><$k8s></color>\n
+title <color:blue></color>Deployment - Pod - Container <color:blue></color>\n
 
 rectangle "<$deploy>\nDeployment" as deploy
 
@@ -32,7 +32,6 @@ together {
     rectangle "<$docker>\nContainer n" as container_n_n
 }
 
-  
 pod_1 -[hidden]-> pod_n
 
 container_1_1 -[hidden]-> container_1_n
@@ -56,11 +55,6 @@ skinparam rectangle {
     BackgroundColor CLOUDOGU_BLUE
     BorderColor #16688d
     FontColor WHITE
-}
-
-skinparam legend {
-    BackgroundColor WHITE
-    BorderColor #16688d
 }
 
 @enduml
