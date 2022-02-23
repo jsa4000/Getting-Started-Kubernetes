@@ -47,10 +47,6 @@ pod_1 -> container_1_n
 pod_n -> container_n_1
 pod_n -> container_n_n
 
-legend
-<color:#23a3dd><$cloudogu></color> [[https://cloudogu.com cloudogu.com]]
-end legend
-
 skinparam arrow {
     Color CLOUDOGU_BLUE
     FontColor WHITE
