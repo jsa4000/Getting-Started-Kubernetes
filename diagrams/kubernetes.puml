@@ -7,7 +7,7 @@ skinparam nodesep 10
 skinparam ranksep 10
 
 ' Kubernetes
-!define KubernetesPuml https://raw.githubusercontent.com/dcasati/kubernetes-PlantUML/master/dist
+!define KubernetesPuml https://raw.githubusercontent.com/jsa4000/kubernetes-PlantUML/master/dist
 
 !includeurl KubernetesPuml/kubernetes_Common.puml
 !includeurl KubernetesPuml/kubernetes_Context.puml
@@ -20,7 +20,11 @@ skinparam ranksep 10
 !includeurl KubernetesPuml/OSS/KubernetesDeploy.puml
 !includeurl KubernetesPuml/OSS/KubernetesHpa.puml
 
+!include <osa/user/audit/audit>
+
 actor "User" as userAlias
+
+
 left to right direction
 
 ' Kubernetes Components
