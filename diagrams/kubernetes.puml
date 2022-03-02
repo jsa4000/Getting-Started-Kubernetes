@@ -3,11 +3,25 @@
 footer Kubernetes Plant-UML
 scale max 1024 width
 
-skinparam nodesep 10
-skinparam ranksep 10
+' skinparam nodesep 5
+' skinparam ranksep 5
+
+!define BLUE_COLOR #23a3dd
+
+skinparam arrow {
+    Color BLUE_COLOR
+    FontColor BLACK
+}
+
+skinparam rectangle {
+    BackgroundColor BLUE_COLOR
+    BorderColor #16688d
+    FontColor BLACK
+}
+
 
 ' Kubernetes
-!define KubernetesPuml https://raw.githubusercontent.com/jsa4000/kubernetes-PlantUML/master/dist
+!define KubernetesPuml https://raw.githubusercontent.com/jsa4000/Getting-Started-Kubernetes/main/dist
 
 !includeurl KubernetesPuml/kubernetes_Common.puml
 !includeurl KubernetesPuml/kubernetes_Context.puml
@@ -19,18 +33,16 @@ skinparam ranksep 10
 !includeurl KubernetesPuml/OSS/KubernetesRs.puml
 !includeurl KubernetesPuml/OSS/KubernetesDeploy.puml
 !includeurl KubernetesPuml/OSS/KubernetesHpa.puml
+!includeurl KubernetesPuml/OSS/KubernetesUser.puml
 
-!include <osa/user/audit/audit>
-
-actor "User" as userAlias
-
+KubernetesUser(userAlias, "User", "")
 
 left to right direction
 
 ' Kubernetes Components
 Cluster_Boundary(cluster, "Kubernetes Cluster") {
     Namespace_Boundary(ns, "micro") {
-        KubernetesIng(ingress, "domain.com", "")
+        KubernetesIng(ingress, "example.domain.com", "")
         KubernetesSvc(svc, "Service", "")
         KubernetesPod(pod1, "Pod1", "")
         KubernetesPod(pod2, "Pod2", "")
